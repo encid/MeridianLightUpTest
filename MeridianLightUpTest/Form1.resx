@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>1.  Start this program with USB cable (223-00101) unplugged from PC.
+2.  Note the COM ports on list.
+3.  Plug USB cable 223-00101 into PC.
+4.  Click 'Refresh COM Ports'
+5.  Highlight the newest COM port that appeared on the list
+6.  Connect USB cable (3-pin Molex) to Meridian unit.
+7.  Turn Power ON to Meridian
+8.  Click 'Lights On!'</value>
+  </data>
 </root>

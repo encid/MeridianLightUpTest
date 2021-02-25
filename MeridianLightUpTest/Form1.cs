@@ -112,9 +112,17 @@ namespace MeridianLightUpTest
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string comPort = listBox1.SelectedItem.ToString();
+            int baudRate = 57600;
+
+            SendCommand(comPort, baudRate);
+        }
+
+        private void SendCommand(string comPort, int baudRate)
+        {
             try
             {
-                SerialPort port = new SerialPort(listBox1.SelectedItem.ToString(), 57600);
+                SerialPort port = new SerialPort(comPort, baudRate);
 
                 if (!port.IsOpen)
                     port.Open();
@@ -132,6 +140,14 @@ namespace MeridianLightUpTest
             {
                 return;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string comPort = listBox1.SelectedItem.ToString();
+            int baudRate = 9600;
+
+            SendCommand(comPort, baudRate);
         }
     }
 }
