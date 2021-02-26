@@ -40,7 +40,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 316);
+            this.button1.Location = new System.Drawing.Point(26, 342);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 23);
             this.button1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(212, 212);
+            this.button2.Location = new System.Drawing.Point(212, 219);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 70);
             this.button2.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(26, 178);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(152, 132);
+            this.listBox1.Size = new System.Drawing.Size(152, 148);
             this.listBox1.TabIndex = 3;
             // 
             // label1
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 355);
+            this.ClientSize = new System.Drawing.Size(388, 377);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,7 +117,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Meridian Light-up Test v0.2";
+            this.Text = "Meridian Light-up Test v0.3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

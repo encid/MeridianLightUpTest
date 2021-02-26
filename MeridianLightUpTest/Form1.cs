@@ -24,13 +24,23 @@ namespace MeridianLightUpTest
 
         public void AddPortsToListBox()
         {
-            listBox1.Items.Clear();
-            var ports = GetAllPorts3();
-            foreach (var item in ports)
+            try
             {
-                listBox1.Items.Add(item.ToString());
+                listBox1.Items.Clear();
+                var ports = GetAllPorts3();
+                foreach (var item in ports)
+                {
+                    listBox1.Items.Add(item.ToString());
+                }
+
+                if (listBox1.Items.Count > 0)
+                {
+                    listBox1.SelectedIndex = 0;
+                }
             }
-            listBox1.SelectedIndex = 0;
+            catch 
+            {
+            }           
         }
 
         public List<string> GetAllPorts()
@@ -63,6 +73,10 @@ namespace MeridianLightUpTest
             return pList;
         }
 
+        /// <summary>
+        /// Preferred method for getting ports on Windows
+        /// </summary>
+        /// <returns></returns>
         public List<string> GetAllPorts3()
         {
             var pList = new List<string>();
@@ -112,7 +126,12 @@ namespace MeridianLightUpTest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string comPort = listBox1.SelectedItem.ToString();
+            //if (listBox1.Items.Count < 1)
+            //{
+            //    return;
+            //}
+
+            string comPort = Convert.ToString(listBox1.SelectedItem);
             int baudRate = 57600;
 
             SendCommand(comPort, baudRate);
@@ -136,9 +155,9 @@ namespace MeridianLightUpTest
                 port.Write("M 1 30 1 5016 0 0 1 1\r\n");
                 port.Close();
             }
-            catch (Exception)
+            catch 
             {
-                return;
+                
             }
         }
 
